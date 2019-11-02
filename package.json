@@ -36,7 +36,7 @@
     "lodash": "^2.4.1",
     "lru-cache": "^4.0.1",
     "moment": "^2.19.3",
-    "mongoose": "^4.11.8",
+    "mongoose": "^5.7.7",
     "morgan": "^1.7.0",
     "fantasygoldcore-lib": "https://github.com/fantasygold/fantasygoldcore-lib.git#master",
     "request": "^2.83.0",
