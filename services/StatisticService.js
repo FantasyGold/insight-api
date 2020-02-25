@@ -1003,7 +1003,7 @@ StatisticService.prototype.getTotal = function(nextCb) {
 StatisticService.prototype.getTotalSupply  = function() {
     var blockHeight = this.node.services.fantasygoldd.height;
 
-    var supply = (new BigNumber(100000000)).plus((blockHeight - 8800) * 5);
+    var supply = (new BigNumber(176000000)).plus((blockHeight - 8800) * 5);
 
     return supply;
 }
