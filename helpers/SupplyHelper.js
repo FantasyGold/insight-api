@@ -7,7 +7,7 @@ module.exports = {
      * @return {BigNumber}
      */
     getTotalSupplyByHeight: function (height) {
-        return (new BigNumber(100000000)).plus((height - 8800) * 5);
+        return (new BigNumber(176000000)).plus((height - 8800) * 5);
     }
 
 };
