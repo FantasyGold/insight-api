@@ -5,12 +5,12 @@ var should = require('should');
 var UtilsController = require('../lib/utils');
 
 describe('Utils', function() {
-  describe('/utils/estimatesmartfee', function() {
+  describe('/utils/estimatefee', function() {
     it('should give the correct fee', function(done) {
       var node = {
         services: {
           fantasygoldd: {
-            estimateSmartFee: function(blocks, callback) {
+            estimateFee: function(blocks, callback) {
               switch(blocks) {
               case 1:
                 return callback(null, 1000 / 1e8);
@@ -35,7 +35,7 @@ describe('Utils', function() {
           done();
         }
       };
-      utils.estimateSmartFee(req, res);
+      utils.estimateFee(req, res);
     });
   });
 });

@@ -1,9 +1,13 @@
 {
   "name": "fantasygold-insight-api",
   "description": "A FantasyGold blockchain REST and web socket API service for FantasyGoldcore Node.",
-  "version": "0.0.23",
+  "version": "0.0.26",
   "repository": "https://github.com/fantasygold/insight-api.git",
-  "contributors": [],
+  "contributors": [
+    "Qtum Project Foundation",
+    "SilenceFGC <silence@fantasygold.io>",
+    "NicoFGC <nico@fantasygold.io>"
+  ],
   "bugs": {
     "url": "https://github.com/fantasygold/insight-api/issues"
   },
@@ -33,10 +37,11 @@
     "bitcore-message": "^1.0.1",
     "body-parser": "^1.13.3",
     "compression": "^1.6.1",
-    "lodash": "^4.17.15",
+    "cors": "^2.8.5",
+    "lodash": "^2.4.1",
     "lru-cache": "^4.0.1",
     "moment": "^2.19.3",
-    "mongoose": "^5.7.7",
+    "mongoose": "^4.11.8",
     "morgan": "^1.7.0",
     "fantasygoldcore-lib": "https://github.com/fantasygold/fantasygoldcore-lib.git#master",
     "request": "^2.83.0",

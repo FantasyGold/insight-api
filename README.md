@@ -40,6 +40,9 @@ This is a backend-only service. If you're looking for the web frontend applicati
     ```bash
     # with ZMQ
     sudo apt-get install libzmq3-dev 
+           # with bitcore
+    ./configure --enable-bitcore
+        ```  
     ```  
 4. Install fantasygoldcore-node  
 
@@ -166,6 +169,29 @@ Or disabled entirely with:
     }
   }
   ```
+## Enable / Disable logs
+
+ To reduce the load on the server, fantasygold-insight-api has opportunity to enable / disable logs.
+ Both `enableApiLogs` and `enableContractsApiLogs` can be configured in `fantasygoldcore-node.json` with:
+``` json
+  "servicesConfig": {
+    "qtum-insight-api": {
+      "enableApiLogs": true,
+      "enableContractsApiLogs": false
+    }
+  }
+```
+
+**Note:** In the case below `enableApiLogs` overrides `enableContractsApiLogs`:
+
+``` json
+  "servicesConfig": {
+    "qtum-insight-api": {
+       "enableApiLogs": false,
+       "enableContractsApiLogs": true
+    }
+  }
+```
 
 
 
