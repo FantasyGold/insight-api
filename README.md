@@ -68,6 +68,8 @@ This is a backend-only service. If you're looking for the web frontend applicati
       ],
       "servicesConfig": {
         "fantasygold-insight-api": {
+          "enableApiLogs": true,
+          "enableContractsApiLogs": true,
           "routePrefix": "fantasygold-insight-api",
           "rateLimiterOptions": {
           "whitelist": [
@@ -169,13 +171,15 @@ Or disabled entirely with:
     }
   }
   ```
+
+
 ## Enable / Disable logs
 
  To reduce the load on the server, fantasygold-insight-api has opportunity to enable / disable logs.
  Both `enableApiLogs` and `enableContractsApiLogs` can be configured in `fantasygoldcore-node.json` with:
 ``` json
   "servicesConfig": {
-    "qtum-insight-api": {
+    "fantasygold-insight-api": {
       "enableApiLogs": true,
       "enableContractsApiLogs": false
     }
@@ -186,13 +190,12 @@ Or disabled entirely with:
 
 ``` json
   "servicesConfig": {
-    "qtum-insight-api": {
+    "fantasygold-insight-api": {
        "enableApiLogs": false,
        "enableContractsApiLogs": true
     }
   }
 ```
-
 
 
 ## Tokens
@@ -744,12 +747,12 @@ Where "xxx" can be:
 
 ### Utility Methods
 ```
-  /fantasygold-insight-api/utils/estimatesmartfee[?nbBlocks=2]
+  /fantasygold-insight-api/utils/estimatefee[?nbBlocks=2]
 ```
 
-### Min Estimate Smart Fee Per KB
+### Min Estimate Fee Per KB
 ```
-  /fantasygold-insight-api/utils/minestimatesmartfee[?nbBlocks=2]
+  /fantasygold-insight-api/utils/minestimatefee[?nbBlocks=2]
 ```
 
 resp:
@@ -771,6 +774,9 @@ resp:
 ```
 
 ### FGC20 transfers
+
+If you want to get receipt, then add "withReceipt=true" to the query
+
 ```
   /fantasygold-insight-api/erc20/:contractAddress/transfers
 ```
